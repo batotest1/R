@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(home: Sad()));
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class Sad extends StatefulWidget {
+  const Sad({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<Sad> createState() => _SadState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _SadState extends State<Sad> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(), body: Center(child: Text("sahifa")));
+    return Scaffold(
+      backgroundColor: Colors.redAccent,
+      appBar: AppBar(
+        title: Text("Malikxon"),
+        backgroundColor: const Color.fromARGB(255, 0, 13, 255),
+      ),
+    );
   }
 }
